@@ -11,7 +11,7 @@ class App extends Component {
         <div className="container mt-3">
           <h1>Hobbies</h1>
           <Routes>
-            <Route path="/users" element={<UserList/>} />
+            <Route path="/" element={<UserList/>} />
             <Route path="/add" element={<AddUser/>} />
           </Routes>
         </div>

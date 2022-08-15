@@ -120,7 +120,7 @@ export default class AddTutorial extends Component<Props, State> {
                 name="phone_number"
               />
             </div>
-            <Link className="btn" to={"/users"}>
+            <Link className="btn" to={"/"}>
                 Back
             </Link>
             <button onClick={this.save} className="btn btn-success">
