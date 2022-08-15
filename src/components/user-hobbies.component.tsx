@@ -22,8 +22,11 @@ export default class UserHobbies extends Component<Props, State> {
             new_hobby: "",
             adding: false,
             submitted: false,
-            loading: false
+            loading: true
         };
+    }
+    componentDidMount() {
+        this.getHobbies();
     }
     componentDidUpdate(prevProps: Props) {
         if (prevProps.user_id !== this.props.user_id) {
