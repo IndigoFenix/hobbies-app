@@ -66,8 +66,11 @@ export default class AddTutorial extends Component<Props, State> {
         {submitted ? (
           <div>
             <h4>You submitted successfully!</h4>
+            <Link className="btn" to={"/"}>
+                Back to list
+            </Link>
             <button className="btn btn-success" onClick={this.reset}>
-              Add
+              Add another
             </button>
           </div>
         ) : (
