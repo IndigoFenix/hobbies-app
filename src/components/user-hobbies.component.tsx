@@ -103,7 +103,7 @@ export default class UserHobbies extends Component<Props, State> {
                     </div>
                 ) : (
                     <div>
-                        <ul className="list-group">
+                        <ul className="list-group mb-2">
                             {hobbies &&
                                 hobbies.map((hobby: IHobby, index: number) => (
                                     <li className="list-group-item">
@@ -113,23 +113,24 @@ export default class UserHobbies extends Component<Props, State> {
                                 ))}
                         </ul>
                         {adding ? (
-                            <div className="submit-form">
+                            <div className="submit-form mb-2">
                                 <div className="form-group">
                                     <input
                                         type="text"
-                                        className="form-control"
+                                        className="form-control mb-2"
                                         id="new_hobby"
                                         required
+                                        placeholder="Hobby Name"
                                         disabled={submitted}
                                         value={new_hobby}
                                         onChange={this.onChangeValue}
                                         name="new_hobby"
                                     />
                                 </div>
-                                <button className="btn" onClick={() => {this.setState({adding: false})}}>
+                                <button className="btn me-2" onClick={() => {this.setState({adding: false})}}>
                                     Cancel
                                 </button>
-                                <button onClick={this.save} className="btn btn-success">
+                                <button onClick={this.save} disabled={!new_hobby} className="btn btn-success">
                                     Submit
                                 </button>
                             </div>

@@ -65,9 +65,9 @@ export default class AddTutorial extends Component<Props, State> {
       <div className="submit-form">
         {submitted ? (
           <div>
-            <h4>You submitted successfully!</h4>
+            <h4>User added!</h4>
             <Link className="btn" to={"/"}>
-                Back to list
+              Back to list
             </Link>
             <button className="btn btn-success" onClick={this.reset}>
               Add another
@@ -75,56 +75,59 @@ export default class AddTutorial extends Component<Props, State> {
           </div>
         ) : (
           <div>
-            <div className="form-group">
-              <label htmlFor="first_name">First Name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="first_name"
-                required
-                value={first_name}
-                onChange={this.onChangeValue}
-                name="first_name"
-              />
+            <h4>Add New User</h4>
+            <div className="mb-2">
+              <div className="form-group">
+                <label htmlFor="first_name">First Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="first_name"
+                  required
+                  value={first_name}
+                  onChange={this.onChangeValue}
+                  name="first_name"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="last_name">Last Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="last_name"
+                  required
+                  value={last_name}
+                  onChange={this.onChangeValue}
+                  name="last_name"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="address">Address</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="address"
+                  required
+                  value={address}
+                  onChange={this.onChangeValue}
+                  name="address"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="phone_number">Phone Number</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="phone_number"
+                  required
+                  value={phone_number}
+                  onChange={this.onChangeValue}
+                  name="phone_number"
+                />
+              </div>
             </div>
-            <div className="form-group">
-              <label htmlFor="last_name">Last Name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="last_name"
-                required
-                value={last_name}
-                onChange={this.onChangeValue}
-                name="last_name"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="address">Address</label>
-              <input
-                type="text"
-                className="form-control"
-                id="address"
-                required
-                value={address}
-                onChange={this.onChangeValue}
-                name="address"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone_number">Phone Number</label>
-              <input
-                type="text"
-                className="form-control"
-                id="phone_number"
-                required
-                value={phone_number}
-                onChange={this.onChangeValue}
-                name="phone_number"
-              />
-            </div>
-            <Link className="btn" to={"/"}>
-                Back
+            <Link className="btn me-2" to={"/"}>
+              Back
             </Link>
             <button onClick={this.save} className="btn btn-success">
               Submit

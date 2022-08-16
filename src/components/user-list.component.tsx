@@ -71,7 +71,7 @@ export default class UserList extends Component<Props, State>{
             <div className="list row">
                 <div className="col-md-6">
                     <h4>Users</h4>
-                    <Link className="btn btn-success" to={"/add"}>
+                    <Link className="btn btn-success mb-2" to={"/add"}>
                         Add User
                     </Link>
                     {loading ? (

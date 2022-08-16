@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <div className="container mt-3">
-          <h1>Hobbies</h1>
+          <h1>Hobbies App</h1>
           <Routes>
             <Route path="/" element={<UserList/>} />
             <Route path="/add" element={<AddUser/>} />
