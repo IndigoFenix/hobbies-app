@@ -1,6 +1,6 @@
 import axios from "axios";
 export default axios.create({
-  baseURL: "https://ec2-13-58-147-206.us-east-2.compute.amazonaws.com:8080/api",
+  baseURL: "https://hobbies-backend.herokuapp.com/api",
   headers: {
     "Content-type": "application/json"
   }
